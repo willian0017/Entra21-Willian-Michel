@@ -1,0 +1,84 @@
+10)
+	Qual é o resultado de cada operação? 
+    	A) "" + 1 + 0 // 10
+    	B) "" - 1 + 0 // -1
+    	C) 6 / "3" // 2
+    	D) "2" * "3" // 6
+    	E) 4 + 5 + "px" // 9px
+    	F) "$" + 4 + 5 // $9
+    	G) "4" - 2 // 2
+
+11) 
+	let altura = Number(prompt("Digite o valor da Altura do retângulo"))
+        let largura =Number(prompt("Digite o valor da Largura do retângulo"))
+        let area = largura * altura
+        let perimetro = (largura *2 ) + (altura *2 )
+        console.log(`A área do retângulo é: ${area}`)
+        console.log(`O perímetro do retângulo é: ${perimetro}`)
+
+12)
+	let n1 =Number(prompt("Insira um número"))
+       	let n2 =Number(prompt("Insira outro número"))
+       	let soma = n1 + n2
+      	console.log(soma)
+
+13)
+ 	let notaA =Number(prompt("Digita a nota A"))
+        let notaB =Number(prompt("Digite a nota B"))
+        let media = (notaA + notaB) / 2
+        console.log(`A média entre ${notaA} e ${notaB} é: ${media.toFixed(2)}`)
+
+14) 
+	 let numero1 = Number(prompt("Digite um número"))
+      	 let numero2 = Number(prompt("Digite um número"))
+      	 let numero3 = Number(prompt("Digite um número"))
+       	 let resultado1 = numero1 ** 2
+      	 let resultado2 = numero2 ** 2
+      	 let resultado3 = numero3 ** 2
+      	 console.log(`O número ${numero1} ao quadrado é: ${resultado1}\n O número ${numero2} ao quadrado é: ${resultado2}\n O número ${numero3} ao quadrado é: ${resultado3}`)
+
+15)
+ 	 let a = 10 // a = 10
+     	 let b = 20 // a = 10, b = 20
+     	 console.log(a, b)
+
+16)  
+	let meses = Number(prompt("Insira quantidade de meses"))
+     	let dias = 31 * meses
+     	console.log(dias)
+
+
+1) desafio
+
+ let numero = Number(prompt("Digite um número"))
+         let antecessor = numero - 1
+         let posterior = numero + 1
+         console.log(`O antecessor é ${antecessor}\n O numero ${numero}\n O posterior é ${posterior}`)
+
+2) 
+	let raio = Number(prompt("Digite um número"))
+        const PI = 3.14159
+        let area = 4 / 3 * PI * raio ** 3
+        console.log(area.toFixed(2))
+
+3)	
+	alert("Calculando área do triângulo")
+        let base = Number(prompt("Digite um número"))
+        let altura =Number(prompt("Digite um número"))
+        let area = base * altura / 2 
+        console.log(`Area: ${area.toFixed(2)}`)
+
+4) 
+	let preco =Number(prompt("Digite um preço"))
+        let percentualDesconto =Number(prompt("Digite um percentual"))
+        let desconto = percentualDesconto / 100 * preco
+        let total = preco - desconto
+        console.log(`Total: ${total}\n Desconto ${desconto}`)
+
+
+5) 
+	let nome = prompt("nome do vendedor")
+        let salario = Number(prompt("salario do vendedor"))
+        let vendas = Number(prompt("total de vendas"))
+        let salarioFinal = salario + (vendas * 15 / 100)
+        console.log(`O total a receber é ${salarioFinal.toFixed(2)}`)

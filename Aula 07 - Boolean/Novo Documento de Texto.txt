@@ -1,0 +1,10 @@
+if
+
+if (numero <10) {
+console.log("O número é menor que 10!")
+}
+if (numero===10)
+
+switch
+validar valor da variável
+break para parar.

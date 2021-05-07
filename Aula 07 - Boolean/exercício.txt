@@ -1,0 +1,39 @@
+1) Qual é a saída dos seguintes comandos
+console.log(!10) // false
+console.log(!!"String") // true
+console.log(!!2.3) // true
+console.log(Boolean(null)) // false
+
+2) Qual é a saída das seguintes instruções
+console.log(10 > 2) // false
+console.log(5 >= "5") // true
+console.log(5 >= "5") // true
+console.log("apple" > "pineapple") // false
+console.log("2" > "12") // true
+console.log(undefined == null) // true
+console.log(undefined === null) // false
+console.log(null == "\n0\n") // false
+console.log(null === +"\n0\n") // false
+
+3) 
+    let numero = 15
+    if (numero > 10) {
+    }
+    console.log(`O valor de ${numero} é maior que 10`)
+
+4)
+
+
+
+
+
+
+7) Considerando o valor de A = 10 e B = 20, responda a saída das seguintes expressões:        
+Boolean(A > 10 && B <= 20) // false
+Boolean(A > 10 || B <= 20) // true
+Boolean((A === 10 || B > 20) && B === 20) // true
+console.log(null || 2 || undefined) // 2
+Boolean(0 && 1) // false 
+
+
+
