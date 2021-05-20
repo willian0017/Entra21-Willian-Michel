@@ -1,0 +1,90 @@
+1) Faça uma função que recebe um valor inteiro e verifica se o valor é positivo ou negativo. 
+        
+        function ehPositivo(numero) {
+            return numero > 0    
+        }
+        let numero = +prompt("Digite um número")
+        console.log(ehPositivo(numero))
+
+2) Crie uma função minimo(a, b) que retorna o menor valor entre dois números a e b.
+Receba os dois valores do usuário e mostre o resultado da função.
+
+        let a = +prompt("Digite um número")
+        let b = +prompt("Digite um número")
+        function menorValor(a, b){
+        if (a < b) {
+           return menor
+        } else (b < a) 
+           return menor
+        }
+        console.log(menor)
+
+3) Crie uma função potencia(a, b) que retorna a elevado a b. Receba um valor do usuário e 
+mostre o resultado da função.
+
+        let a = +prompt("Digite um número")
+        let b = +prompt("Digite um número")
+        let resultado = numElevado(a, b);
+        function numElevado(a, b) {
+        return a ** b;
+        }
+        console.log(numElevado(a, b))
+
+4) Crie uma script que receba o valor de 3 notas, utilize uma função para calcular a média e
+mostre ela na tela.
+        
+        let n1 = +prompt("Digite uma nota")
+        let n2 = +prompt("Digite uma nota")
+        let n3 = +prompt("Digite uma nota")
+        let media = mediaDasNotas(n1, n2, n3)
+        function mediaDasNotas(n1, n2, n3) {
+        return (n1 + n2 + n3) / 3
+        }
+        console.log(mediaDasNotas(n1, n2, n3).toFixed(2))
+        
+5) Faça um script que receba a média de um aluno e com a ajuda de uma função que recebe 
+a média por parâmetro retorne o conceito da média conforme a tabela abaixo:
+        +----------------+-----------+
+        |     Média      |  Conceito |
+        +----------------+-----------+
+        | de 0.0 à 4.9   |     D     |
+        | de 5.0 à 6.9   |     C     |
+        | de 7.0 à 8.9   |     B     |
+        | de 9.0 à 10.0  |     A     |
+        +----------------+-----------+
+
+        function mediaDoAluno(m)
+        return m = +prompt("Digite suas notas")
+
+
+
+
+
+
+
+
+6) Faça uma função que recebe, por parâmetro, a altura e o sexo de uma pessoa e 
+retorna o seu peso ideal. Receba a altura e o sexo do usuário e mostre o resultado da função.
+Utilize as fórmulas:
+Mulher: 62.1 x altura - 44.7
+Homem: 72.7 x altura - 58
+        
+        let altura = +prompt("Digite sua altura"),
+        sexo = prompt("masculino (M) feminino (F)")
+        function pesoIdeal(m, f)
+        return m 
+        return f
+        console.log(pesoIdeal(m, f))
+
+7) Faça um procedimento que lê 50 valores inteiros e retorna o maior e o menor deles. 
+Utilize a função Math.random() para gerar valores aleatórios entre 1-1000.
+        
+        function ehPositivo(numero) {
+        return numero >=0 && numero <=50
+        }
+        for (i=0; i<50; i++) {   
+        }
+        numero = +prompt("um numero")
+        console.log(ehPositivo(numero))
+
+8) Faça uma função que recebe a idade de uma pessoa em anos, meses e dias e retorna essa idade expressa em dias.

@@ -1,0 +1,95 @@
+1) Crie uma função que receba uma array e retorne o primeiro e o último elemento desse array como um novo.
+O array pode ter qualquer tamanho.
+
+        let vetor = []
+            let primeiro
+            let ultimo 
+            let position = 0
+            for (let i = 0; i < 5; i++) {
+            vetor[i] = +prompt(`Digite o ${i + 1}º valor do vetor`)
+            if (i === 0) {
+                primeiro = vetor[i]
+            } else if (vetor[i] > ultimo) {
+                ultimo = vetor[i]
+                posicao = i
+            }
+            }
+            console.log(`Primeiro: ${primeiro}\nÚltimo: ${ultimo}`)
+
+            let listaDeNumeros = (primeiro, ultimo)=> {
+                    return `${primeiro} ${ultimo}`
+                }
+        alert(listaDeNumeros())
+
+2) Crie uma função que recebe um número como parâmetro e retorne uma string com o símbolo "#" na quantidade
+especificada no parâmetro.
+Exemplo:
+mostraSimbolo(10) // ##########
+        
+        let numeros = +prompt("Quantidade de números")
+            function mostraSimbolos(numeros) {
+            let resultado = ""
+            for (let i=0; i < numeros; i++) {
+                resultado += "#"
+            }
+            return resultado
+            }
+        console.log(mostraSimbolos(numeros))
+
+3) Escreva uma função que receba dois parâmetros. O primeiro é o elemento que repetirá, enquanto o segundo é
+o número de vezes que haverá a repetição. Um array deve ser retornado
+Exemplo:
+repetirElemento("oi", 3) // ["oi", "oi", "oi"]
+
+        let mensagem = prompt("Quantidade uma mensagem")
+            let vezes = +prompt("Digite quantas vezes")
+            function repetirElemento(mensagem, vezes) {
+                let resultado = 
+            for (let i=0; i < mensagem; i++) {
+                resultado += 
+            }
+            return resultado
+            }
+        console.log(repetirElemento(mensagem, vezes))
+
+4) Escreva um script que receba o ano em que você nasceu e calcule a sua idade. Utilize uma função que retorna
+idade.
+
+        const ano = +prompt("Ano que nasceu")
+            function retornaIdade(ano) {
+            for (i=0; i < ano; i++) {
+            idade = ano - 2021
+            }
+            return idade
+            }
+        console.log(retornaIdade(ano)*-1)
+
+5) Faça uma função que receba um array de 5 elementos. Modifique o vetor[1] = 10 e vetor[2] = 30 e retorne o vetor modificado. 
+Ao final mostre na tela o vetor original e o vetor modificado.
+
+        let vet = [1, 3, 5, 7, 9]
+        function trocaNumeros(vet){
+        let troca1 = vet.indexOf(1)
+        vet[troca1] = 10 
+        vet
+        let troca2 = vet.indexOf(3)
+        vet[troca2] = 30
+        vet
+        return vet
+        }
+        console.log(trocaNumeros(vet))
+
+6) Elabore uma função que receba um vetor e retorne outro vetor que tenha todos os números que são pares e estão em
+índices pares do vetor.
+
+        let vetor = [],
+            pares = 0
+            function pares(vetor) {
+            
+            }
+            for (let i = 0; i < 10; i++) {
+            vetor[i] = +prompt(`Digite o ${i + 1} valor do vetor`)
+            if (vetor[i] % 2 === 0) {
+            pares++
+            }
+

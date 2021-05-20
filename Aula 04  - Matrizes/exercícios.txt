@@ -1,0 +1,151 @@
+1)     
+            let matriz = []
+            for (let i = 0; i < 3; i++) {
+                matriz[i] = []
+                for (let j = 0; j < 3; j++){
+                matriz[i][j] = +prompt("Digite um número")
+                }
+            }
+            let contador = 0
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++){
+                if (matriz[i][j] > 10) {
+                    contador++
+                }
+                }
+            }
+            console.log(`Existe ${contador} números maiores que 10`)
+
+2)          
+            let matriz = []
+            for (let i = 0; i < 5; i++) {
+                matriz[i] = []
+                for (let j = 0; j < 5; j++){
+                matriz[i][j] = +prompt("Digite um número")
+                }
+            }
+            let contador = 0
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++){
+                if (i == j) {
+                    matriz[i][j] = 1
+                }
+                else {
+                    matriz[i][j] = 0
+                }
+                }
+            }
+            let matrizFormatada = ""
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++){
+                    matrizFormatada += matriz[i][j] + "  "
+                }
+                matrizFormatada += "\n"
+            }
+            console.log(matrizFormatada)
+
+
+3)
+            let matriz = []
+            for (let i = 0; i < 3; i++) {
+                matriz[i] = []
+                for (let j = 0; j < 3; j++){
+                matriz[i][j] = prompt("Digite um elemento")
+                }
+            }
+            let busca = prompt("Um elemento para buscar")
+            let achei = false
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                if (matriz[i][j] == busca) {
+                achei = `achado na linha ${i} coluna ${j}`
+                }
+                }
+            }
+                achei ? console.log(achei): console.log("Não achei")
+
+4)          
+            let matriz1 = []
+            for (let i = 0; i < 3; i++) {
+                matriz1[i] = []
+                for (let j = 0; j < 3; j++){
+                matriz1[i][j] = +prompt("Digite um elemento para primeira matriz")
+                }
+            }
+            let matriz2 = []
+            for (let i = 0; i < 3; i++) {
+                matriz2[i] = []
+                for (let j = 0; j < 3; j++){
+                matriz2[i][j] = +prompt("Digite um elemento para segunda matriz")
+                }
+            }
+            let matriz3 = []
+            for (let i = 0; i < 3; i++) {
+                matriz3[i] = []
+                for (let j = 0; j < 3; j++){
+                if (matriz1[i][j] > matriz2[i][j]){
+                    matriz3[i][j] = matriz1[i][j]
+                }    
+                else if (matriz2[i][j] >= matriz1[i][j]) {
+                    matriz3[i][j] = matriz2[i][j]
+                }
+                }
+            }
+            let matrizFormatada = ""
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++){
+                    matrizFormatada += matriz3[i][j] + "  "
+                }
+                matrizFormatada += "\n"
+            }
+            console.log(matrizFormatada)
+
+5) 
+        let matriz = []
+        let diagonal = 0
+            for (let i = 0; i < 3; i++) {
+                matriz[i] = []
+                for (let j = 0; j < 3; j++){
+                matriz[i][j] = +prompt(`Digite o valor da ${i + 1}a linha na ${j + 1} coluna`)  
+
+                if (j > i) diagonal += matriz[i][j]
+                }
+            }
+            let matrizFormatada = ""
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++){
+                    matrizFormatada += matriz[i][j] + "  "
+                }
+                matrizFormatada += "\n"
+            }
+            console.log(matrizFormatada)
+            console.log(`A soma dos elementos acima da diagonal principal é: ${diagonal}`)
+
+
+6. Faça um script que leia o nome e as notas de 3 alunos e armazene essas informações em
+uma matriz no seguinte formato:
+João   10   9   8
+Maria  5    5   5 
+Pedro  8    8   8
+
+Após isso calcule a média de cada aluno e adicione a média na linha correspondente ao aluno
+da matriz:
+João   10   9   8   9
+Maria  5    5   5   5
+Pedro  8    8   8   8
+
+Ao final mostre a matriz no formato abaixo e informe a situação dos alunos ("Aprovado" se a média for maior ou igual a 6
+ou reprovado se for menor que 6).
+Entrada:                  Saída:
+João                      João   10   9   8   9  Aprovado
+10                        Maria  5    5   5   5  Reprovado
+9                         Pedro  8    8   8   8  Aprovado
+8                         
+Maria
+5
+5
+5
+Pedro
+8
+8
+8

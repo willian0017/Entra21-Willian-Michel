@@ -1,0 +1,20 @@
+let vetor = [],
+        maior,
+        menor
+
+    for (let i = 0; i < 5; i++) {
+        vetor[i] = +prompt(`Digite o ${i + 1} valor do vetor`)
+        
+        if (i === 0) {
+            maior = vetor[i]
+            menor = vetor[i]                    
+        } else if (vetor[i] > maior) {
+            maior = vetor[i]                    
+        } else if (vetor[i] < menor) {
+            menor = vetor[i]
+        }
+    }
+
+    console.log(`Vetor: ${vetor}`)
+    console.log(`Maior elemento: ${maior}\nMenor elemento: ${menor}`)
+}
