@@ -85,11 +85,40 @@ Ao final mostre na tela o vetor original e o vetor modificado.
         let vetor = [],
             pares = 0
             function pares(vetor) {
-            
             }
             for (let i = 0; i < 10; i++) {
             vetor[i] = +prompt(`Digite o ${i + 1} valor do vetor`)
             if (vetor[i] % 2 === 0) {
             pares++
             }
+
+7) Desenvolva uma função que receba como parâmetro um número de 1 a 10. Internamente, na função, será
+gerado um número aleatório de 1 a 10. A função deverá retornar se o parâmetro de entrada foi igual ao número
+sorteado internamente. Se o valor fornecido foi o sorteado, retorne "Parabéns! O número sorteado foi o X". Se
+não for igual, retorne "Que pena! O número sorteado foi o X". X é o número que foi sorteado.
+
+        let numero = +prompt("Digite um número")
+            function numAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+            }
+            if (numero === numAleatorio) {
+            console.log("Parabens")
+            } else {
+            console.log("Não foi dessa vez")
+            }
+            let min = 1
+            let max = 10
+        console.log(numAleatorio(min, max))
+
+8) A fim de manter o calendário anual ajustado com o movimento de translação da Terra, criou-se os anos
+    bissextos, que têm 366 dias em vez dos 365 presentes nos anos normais.
+    Para determinar se um ano é bissexto, é necessário saber se ele é multiplo de 4. Não pode ser múltiplo de 100,
+    exceto se for também múltiplo de 400.
+    Com isso em mente, desenvolva uma função que recebe um número correspondente a um ano e retorna se ele
+    é bissexto ou não (true ou false). Após isso mostre na tela uma mensagem "O ano <anoDigitado> é bissexto" 
+    ou "O ano <anoDigitado> não é bissexto".
+    Exemplo:
+    checarAnoBissexto(2020) // true
+    checarAnoBissexto(2100) // false
+
 

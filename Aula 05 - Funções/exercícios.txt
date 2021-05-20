@@ -53,15 +53,20 @@ a média por parâmetro retorne o conceito da média conforme a tabela abaixo:
         | de 9.0 à 10.0  |     A     |
         +----------------+-----------+
 
-        function mediaDoAluno(m)
-        return m = +prompt("Digite suas notas")
-
-
-
-
-
-
-
+        function obtemConceito(media) {
+                let conceito
+                if (media < 5) {
+                    conceito = "D"
+                } else if (media < 7) {
+                    conceito = "C"
+                } else if (media < 9) {
+                    conceito = "B"
+                } else {
+                    conceito = "A"
+                }
+                return conceito 
+            }            
+        }
 
 6) Faça uma função que recebe, por parâmetro, a altura e o sexo de uma pessoa e 
 retorna o seu peso ideal. Receba a altura e o sexo do usuário e mostre o resultado da função.
@@ -69,22 +74,153 @@ Utilize as fórmulas:
 Mulher: 62.1 x altura - 44.7
 Homem: 72.7 x altura - 58
         
-        let altura = +prompt("Digite sua altura"),
-        sexo = prompt("masculino (M) feminino (F)")
-        function pesoIdeal(m, f)
-        return m 
-        return f
-        console.log(pesoIdeal(m, f))
+        function calculaPesoIdeal(altura, sexo) {
+                let pesoIdeal
+
+                switch(sexo) {
+                    case "M":
+                        pesoIdeal = 62.1 * altura - 44.7
+                        break
+                    case "F":
+                        pesoIdeal = 72.7 * altura - 58
+                        break
+                    default:
+                        throw TypeError("Valor de sexo é inválido!")
+                }
+
+                return pesoIdeal
+            }
+
+            let altura = +prompt("Digite a altura")
+            let sexo = prompt("Digite seu sexo").toUpperCase()
+
+            try {
+                console.log(calculaPesoIdeal(altura, peso))
+            } catch(e) {
+                console.log("Erro: " + e)
+            }
 
 7) Faça um procedimento que lê 50 valores inteiros e retorna o maior e o menor deles. 
 Utilize a função Math.random() para gerar valores aleatórios entre 1-1000.
         
-        function ehPositivo(numero) {
-        return numero >=0 && numero <=50
+        function maiorMenor(numeros) {
+                let menor = numeros[0], maior = numeros[0]
+                for (let numero of numeros) {
+                    if (numero > maior) maior = numero
+                    if (numero < menor) menor = numero
+                }
+
+                return [maior, menor]
+            }            
+
+            function cadastraNumeros() {
+                let numeros = []
+                for (let i = 0; i < 50; i++) {
+                    numeros[i] = Math.floor(Math.random() * 1000) + 1
+                }
+
+                return numeros
+            }
+
+            let numeros = cadastraNumeros()
+            let [maior, menor] = maiorMenor(numeros)
+
+            console.log(numeros)
+            console.log(`Maior: ${maior}\nMenor: ${menor}`)
         }
-        for (i=0; i<50; i++) {   
-        }
-        numero = +prompt("um numero")
-        console.log(ehPositivo(numero))
 
 8) Faça uma função que recebe a idade de uma pessoa em anos, meses e dias e retorna essa idade expressa em dias.
+        
+        "use strict"
+        let calculaDias = (anos, meses, dias) => anos * 365 + meses * 30 + dias
+            
+            let anos = +prompt("Digite quantidade de anos"),
+                meses = +prompt("Digite a quantidade de meses"),
+                dias = +prompt("Digite a quantidade de dias")                        
+
+            console.log(calculaDias(anos, meses, dias))
+        }
+
+9) Faça uma função que recebe, por parâmetro, um valor inteiro e positivo e retorna o número de divisores 
+desse valor.
+
+        function quantidadeDivisores(numero) {
+                let quantidade = 0
+                for (let i = 1; i <= numero; i++) {
+                    if (numero % i === 0) quantidade++
+                }
+
+                return quantidade
+            }
+
+            let numero = +prompt("Digite um número")
+
+            console.log(quantidadeDivisores(numero))
+        }
+
+10) Faça uma função que receba um valor inteiro e positivo e calcule o seu fatorial.
+        
+        
+        function fatorial(numero) {
+                let resultado = 1
+                for (let i = numero; i > 0; i--) {
+                    resultado *= i
+                }
+
+                return resultado
+            }
+
+            let numero = +prompt("Digite um número")
+
+            console.log(fatorial(numero))
+        }
+
+11) Faça uma função que verifique se um valor é perfeito ou não. Um valor é dito perfeito quando ele é igual a 
+soma dos seus divisores excetuando ele próprio. (Ex: 6 é perfeito, 6 = 1 + 2 + 3, que são seus divisores). 
+A função deve retornar um valor booleano. Receba um valor do usuário e mostre o resultado da função.
+
+        function ehPerfeito(numero) {
+                let divisores = obtemDivisores(numero)
+                let somaDivisores = 0
+                for (let divisor of divisores) {
+                    somaDivisores += divisor
+                }
+                return somaDivisores === numero
+                }
+                function obtemDivisores(numero) {
+                    let divisores = []
+                    for (let i = 1; i < numero; i++) {
+                        if (numero % i === 0) divisores.push(i)
+                    }
+
+                    return divisores
+                }
+                let numero = +prompt("Digite um número")
+                console.log(ehPerfeito(numero))
+                }
+
+12) Faça um procedimento que recebe 50 valores inteiros por parâmetro e retorna-os ordenados em ordem decrescente.
+Gere 50 valores aleatórios com a função Math.random(), adicione-os em um vetor e mostre eles na tela antes da
+ordenação e após a ordenação.
+
+
+        function cadastraNumeros() {
+        let numeros = []
+        for (let i = 0; i < 50; i++) {
+            numeros[i] = Math.floor(Math.random() * 1000) + 1
+        }
+
+                return numeros
+        }        
+
+        let numeros = cadastraNumeros()
+        console.log(numeros)
+        numeros.sort((a, b) => a - b)
+        console.log(numeros)
+        }
+
+
+13) Faça uma função que recebe por parâmetro os valores necessários para o cálculo da fórmula de bhaskara e 
+retorna as suas raízes, caso seja possível calcular. Peça os valores necessários para o usuário e teste a função.
+
+        
