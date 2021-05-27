@@ -7,18 +7,28 @@
 </head>
 <body>
     <script>
-        let numero = +prompt("Digite um número")
-        function numAleatorio(min, max) {
-            return Math.floor(Math.random() * (max - min) ) + min;
-            }
-        if (numero === numAleatorio) {
-            console.log("Parabens")
-        } else {
-            console.log("Não foi dessa vez")
+        let matriz = [
+            [12, "Matheus"],
+            [13, "João"]
+            ]
+        function trocaNome(matriz){
+        for(var i = 0; i < 1; i++) {
+        matriz[i] = [];
+            for(var j = 0; j < 1; j++) {
+            matriz[i][j] = prompt("Digite o nome do aluno matriculado");
         }
-        let min = 1
-        let max = 10
-        console.log(numAleatorio(min, max))
+            let troca1 = matriz.indexOf()
+            matriz
+            return matriz
+        }    
+        }
+            console.log(trocaNome(matriz))
     </script>
 </body>
 </html>
+
+
+254 Jao 00  01  02
+234 hhh 10  11  12
+567 ggg 20  21  22
+666 ggg 30  31  32

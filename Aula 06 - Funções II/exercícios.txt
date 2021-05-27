@@ -99,7 +99,7 @@ não for igual, retorne "Que pena! O número sorteado foi o X". X é o número q
 
         let numero = +prompt("Digite um número")
             function numAleatorio(min, max) {
-            return Math.floor(Math.random() * (max - min) ) + min;
+            return Math.floor(Math.random() * 10) + 1
             }
             if (numero === numAleatorio) {
             console.log("Parabens")
