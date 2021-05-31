@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let objeto1 = {
+                1: "Cadastrar aluno",
+                2: "Editar aluno",
+                3: "Cadastrar notas",
+                4: "Mostrar aluno",
+                0: "Sair"
+            }
+            console.log(objeto1)
+
+            let objeto2 = {
+                "+1": "Cadastrar aluno",
+                "+2": "Editar aluno",
+                "+3": "Cadastrar notas",
+                "+4": "Mostrar aluno",
+                "+0": "Sair"
+            }
+            for (let chave in objeto2) {
+                console.log(+chave)
+            }
+
+            let pessoa = {
+                nome: prompt("Digite seu nome"),
+                matricula: +prompt("Digite sua matricula"),
+                nota: +prompt("Digite suas notas")
+            }
+            
+    </script>
+</body>
+</html>

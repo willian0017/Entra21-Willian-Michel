@@ -84,3 +84,40 @@ valores e média desses valores (arredondado para duas casas decimais). soma / 5
 /////////////////////////////////////////////////////////////////////////////////////////
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+1) Crie uma função lerNumero() que vai pedir um número até que
+o usuário informe um valor númerico.
+
+            function lerNumero() {
+            while(true)
+            let numero = +prompt("digite um numero")
+            is (isFinit)
+
+2) Crie uma função que vai gerar um valor aleatório com base
+nos limites minimo e máximo passados como parâmetro.
+random(minimo, maximo)
+
+
+        function valorAleatorio() 
+        console.log(Math.random(1, 10))
+
+/////////////////////////////////////////////////////////////////////////////////////////
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+1) Escreva uma função capitalize(string) que retorna uma string com o primeiro caractere de 
+cada palavra em maiúsculo.
+            let string = prompt("Digite um texto")
+            function capitalize(string) {
+            if (string [0]) {  
+            return string.charAt(0).toUpperCase() + string.slice(1)
+            }
+            }
+            alert(string.charAt(0).toUpperCase() + string.slice(1))
+
+2) Escreva uma função checaSpam(string) que retorna um booleano indicando se a string contém 
+as palavras "jequiti" ou "day trading".
+
+3) Escreva uma função truncar(string, tamanhoMaximo) que checa o tamanho de um string e se ela
+excede o tamanhoMaximo substitui o final da string com "..."
+Exemplo:
+truncar("teste teste teste teste", 10) -> "teste test..."
+

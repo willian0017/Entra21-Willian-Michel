@@ -1,0 +1,207 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+1) Crie o objeto contador com 5 métodos:
+incrementa() -> Incrementa o contador em 1
+decrementa() -> Decrementa o contador em 1
+incrementaEm(quantidade) -> Incrementa o contador na quantidade especificada
+decrementaEm(quantidade) -> Decrementa o contador na quantidade especificada
+mostraContador() -> Mostra o valor do contador
+O contador inicia em 0.
+
+        let numero = [1, 2, 3, 4, 5]
+                function incrementar() {
+                for (var i = 0; i < numero.length; i++) {
+                numero[i] += 1
+                }
+                console.log(this.numero)
+                }
+                
+                function decrementar() {
+                for (var i = 0; i < numero.length; i++) {
+                numero[i] -= 1
+                }
+                console.log(this.numero)
+                }
+
+                function incrementaEm(quantidade) {
+                for (var i = 0; i < numero.length; i++) {
+                numero[i] += +prompt("Digite uma quantidade")
+                }
+                console.log(this.numero)
+                }
+                
+                function decrementaEm(quantidade) {
+                for (var i = 0; i < numero.length; i++) {
+                numero[i] -= +prompt("Digite uma quantidade")
+                }
+                console.log(this.numero)
+                }
+
+                function mostraContador() {
+                return numero
+                }
+                console.log(mostraContador())
+
+2) Crie o objeto calculadora com três métodos:
+lerValores() -> pede dois valores ao usuário e os salva como
+propriedades.
+soma() -> retorna a soma dos valores salvos
+multiplicacao() -> retorna a multiplicação dos valores salvos.
+
+        function lerValores(numero1, numero2)
+        let numero1 = +prompt("Digite um número"),
+            numero2 = +prompt("Digite um número")
+        function soma(numero1, numero2){
+        return numero1 + numero2;
+        }       
+        console.log(soma(this.numero1, this.numero2))
+        
+        function multiplicacao(numero1, numero2){
+        return numero1 * numero2;
+        }       
+        console.log(multiplicacao(this.numero1, this.numero2))
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+1) Escreva a função estaVazio(objeto) que retorna true se o objeto não possuir 
+propriedades, falso em caso contrário
+        
+
+        /*let objeto = +prompt("Digite um número")
+                function estaVazio(objeto)
+                Object.keys({}).length === 0
+                console.log(estaVazio(objeto))*/
+
+        /*let objeto = +prompt("Digite um número")
+                Object.prototype.estaVazio = function (objeto) {
+                return Object.keys(this).length == 0;
+                } 
+                console.log(estaVazio(objeto))*/
+
+        /*let objeto = +prompt("Digite um número")
+                function estaVazio(objeto) {
+                for(var key in objeto) {
+                    if(objeto.hasOwnProperty(key))
+                        return false;
+                }
+                return true;
+                }   
+                console.log(estaVazio(objeto))*/
+
+
+2) Dado o objeto:
+let objeto = {
+    p1: 20,
+    p2: 50,
+    p3: 85,
+    p4: "Olá",
+    p5: "Teste"
+    p6: "string",
+    p7: 10 
+Construir uma função que some todas as propriedades númericas do objeto.
+
+E as mostre na tela
+
+
+        function somaObjetos() {
+            let objeto = {
+                p1: 20,
+                p2: 50,
+                p3: 85,
+                p4: "Olá",
+                p5: "Teste",
+                p6: "string",
+                p7: 10 
+            }
+            return (p1 + p2 + p3 + p4 + p5 + p6 + p7)
+            }
+            console.log(somaObjetos())
+
+
+3) Adapte o trabalho de funções para armazenar as informações em um objeto.
+        let c
+            let matriz = []
+            function chamarMenu() {
+                while (c != 0) {
+                    opcao = +(prompt("Digite um número correspondente a opção\n 1- Cadastrar Nome do Aluno\n 2- Editar Nome\n 3- Pedir Nota do Aluno\n 4- Exibição dos Dados em Tabela"))
+                    switch (opcao) {
+                        case 1:
+                            cadastraNome()
+                            break;
+                        case 2:
+                            verificacaoNome()
+                            break;
+                        case 3:
+                            cadastraNotas()
+                            break;
+                        case 4:
+                            organizarTabela()
+                            break
+                        default:
+                            alert("Opção inválida")
+                    }
+                    c = +(prompt("Digite 1 Para Continuar ou 0 Para Sair"))
+                }
+            }
+            chamarMenu()
+        
+            function cadastraNome() {
+            
+                for (let linha = 0; linha < 3; linha++) {
+                    matriz[linha] = []
+                    for (let coluna = 0; coluna < 2; coluna++) {
+                    
+                        if (coluna === 0) {
+                            matriz[linha][coluna] = +prompt("Digite a Matrícula do Aluno")
+                        } else {
+                            matriz[linha][1] = prompt("Digite o Nome do Aluno")
+                        
+                        }
+                    }
+                
+                }
+            }
+        
+            function casoOK(linha) {
+                let outroNome = prompt("Digite o nome correto")
+                matriz[linha][1] = outroNome
+            }
+            function verificacaoNome() {
+                let verificaMatricula = +prompt("Insira o número da matricula")
+                for (let i = 0; i < 3; i++) {
+                    for (let j = 0; j < 6; j++) {
+                        if (verificaMatricula === matriz[i][j]) {
+                            confirm(`O usuário ${matriz[i][1]} está cadastrado na matricula ${verificaMatricula} deseja alterar? Pressione ok.`)
+                            if (true) {
+                                casoOK(i)
+                            }
+                        }
+                    }
+                }
+            }
+
+            function cadastraNotas() {
+                let media = 0
+                let soma = 0
+                let impresso = ""
+                for (let linha = 0; linha < 3; linha++) {
+                    impresso = matriz[linha][1]
+                    for (let coluna = 0; coluna < 6; coluna++) {
+                    
+                        if (matriz[linha][coluna] === matriz[linha][2] || matriz[linha][coluna] === matriz[linha][3] || matriz[linha][coluna] === matriz[linha][4]) {
+                            matriz[linha][coluna] = +(prompt("Digite uma Nota Para " + impresso))
+                            soma += matriz[linha][coluna]
+                            media = soma / 3
+                        }
+                    
+                        if (matriz[linha][coluna] === matriz[linha][6]) {
+                            matriz[linha][coluna] = media.toFixed(2)
+                        }
+                    }
+                    soma =0
+                }
+            
+            }
+                function organizarTabela(){
+                    console.table(matriz)
+                }
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
