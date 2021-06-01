@@ -1,0 +1,95 @@
+2)      <h2>Algumas marcas</h2>
+        <p>Esse parágrafo está em <em>itálico!</em></p>
+        <p><ins>Parágrafo sublinhado...</ins></p>
+        <p><big>Utilizando a marca big</big> e a marca <small>small</small> </p>
+        <p>Mais uma marca que permite expressões do gênero x² e y²</p>
+        <p>Exemplo de caracteres especiais:
+            <br>
+            &agrave, &aacute, &atilde, &acirc, &ccedil, &eacute, &egrave, &otilde
+        </p>   
+
+3)      <h1>FONTES:</h1> 
+        <br>
+        <p class="verde">No mundo dos negócios, todos são pagos com duas
+            <br>
+            moedas. Dinheiro e experiência... Agarre a experiência
+            <br> 
+            primeiro e o dinheiro virá depois! -- Harold Geenen </p>
+        <p class="vermelho"> "Há homens que lutam um dia e são bons.
+            <br>
+            Há outros que lutam muitos dias e são melhores
+            <br>
+            Mas há os que lutam todos os dias e estes são imprencidíveis"
+            <br>
+            <br>
+            --Bertold Brecht</p>
+        
+        .verde {
+            color: green;
+            }
+
+        .vermelho {
+                color: red;
+            }
+
+4)              <style>
+            body {
+                background-color: grey;
+            }
+        </style>
+        <hr class="cimabaixo">
+        <h1>A CONSTRUCÃO</h1>
+        <hr class="segunda">
+        <img class="img" src="https://sites.google.com/site/desenvolvimentowebi20121/home/quadro-de-avisos/listadeexercicios01-imagens/anjo.jpg" alt="Torre de Babel">
+        <p>Eles erguem a Torre de Babel
+            <br>
+            Para escalar o Céu,
+            <br>
+            Mas Deus não estava lá
+            <br>
+            Estava ali mesmo, entre eles,
+            <br>
+            ajudando a construir a torre.
+        </p>
+
+        <h3 class="autor">Mário Quintana</h3>
+        <hr class="cimabaixo">
+
+
+
+
+
+
+
+            .autor {
+                font-style: italic;
+                text-align: center;
+                font-family: Arial, "Helvetica Neue";
+            }
+
+            h1 {
+                text-align: center;
+                color: blue;
+                font-family: Arial, "Helvetica Neue";
+              }
+
+            p {
+                text-align: center;
+                font-size: large;
+                font-family: Arial, "Helvetica Neue";
+              }
+
+            .img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 20%;
+            }
+
+            .cimabaixo {
+                border: 1px solid black
+            }
+
+            .segunda {
+                color: grey;
+            }
