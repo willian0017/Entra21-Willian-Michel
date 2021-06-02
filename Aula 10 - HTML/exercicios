@@ -57,10 +57,6 @@
 
 
 
-
-
-
-
             .autor {
                 font-style: italic;
                 text-align: center;
@@ -93,3 +89,55 @@
             .segunda {
                 color: grey;
             }
+
+4)      <style>
+            body{
+                background-color: #40404a;
+            }
+        </style>
+        <h3>Lorem Ipsum</h3>
+        <img class="imagem" src="levicon.png" alt="lorem">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet malesuada turpis, 
+            <br>
+            et venenatis risus porttitor eu. In eleifend, lectus nec tempus semper, lacus arcu 
+            <br>
+            placerat dolor, quis porttitor turpis justo at velit. Morbi in ante et metus mollis
+            <br> 
+            auctor. Nulla et consequat neque. Suspendisse non neque vel massa convallis iaculis ut ut
+            <br>
+            ligula. Donec eu purus lectus. Cras turpis leo, porta a leo ut, scelerisque tempus ex. 
+            <br>
+            Vestibulum vitae fermentum felis. Nunc ultricies egestas nibh ac dictum. Curabitur eget
+            <br> 
+            neque posuere, pretium tortor eget, tempor arcu. Ut <strong class="negrito">consequat</strong> lacinia enim, eu placerat,
+            <br> 
+            nibh rhoncus id. Nullam porttitor augue non nisl vestibulum ornare.
+            <br>
+            Ut consequat lacinia enim, eu placerat. </p>
+            <br>
+        <h5>Fonte: <a class="site" href="www.lipsun.com"></a></h5>
+
+             h3 {
+         color: #d4ea9f;
+         font-family: tahoma;
+         }
+
+         p {
+             color:#d8eade;
+             font-family: arial;
+         }
+
+         .negrito {
+             color:#d4ea9f;
+         }
+
+         .site {
+             color: #d4ea9f;
+         }
+
+         h5 {
+             color: white;
+             font-family: tahoma;
+         }
+
+5)
