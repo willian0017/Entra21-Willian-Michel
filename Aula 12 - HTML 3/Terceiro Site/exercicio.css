@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+}
+
+::before::after {
+    box-sizing: inherit;
+}
+
+header {
+    text-align: center;
+    background-image: url("overlay.png"), url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+    font-family: 'Source Sans Pro';
+    background-size: 360px;
+    padding: 50px;
+}
+
+
+header img{
+    border-radius: 100px;
+    margin-top: 20px;
+    width: 100px;
+}
+
+
+header strong {
+    color:white;
+}
+
+
+header h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2em;
+    line-height: 1.75em;
+    margin: 5;
+}
+
+
+header a { 
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.segunda {
+    text-align: left;
+    font-family: 'Source Sans Pro';
+    margin: 30px;
+}
+
+.segunda h2 {
+    color: #787878;
+    font-size: 21px;
+}
+
+.segunda p {
+    color: #A2A2A2;
+    font-size: 16px;
+}
+
+.segunda a {
+    text-decoration: none;
+    color: #787878;
+    text-align: center;
+    margin: 100px;
+}
+
+.terceira {
+    text-align: left;
+    font-family: 'Source Sans Pro';
+    margin-bottom: 80px;
+}
+
+.terceira h2 {
+    font-size: 21px;
+    color: #787878;
+}
+
+.terceira h3 {
+    font-size: 15px;
+    color: #787878;
+}
+
+.terceira p {
+    color: #787878;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.terceira img { 
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.terceira a {
+    color: #787878;
+    text-decoration: none;
+    margin: 100px;
+}
+
+.quarta { 
+    text-align: left;
+    font-family: 'Source Sans Pro';
+}
+
+.quarta h2 {
+    color: #787878;
+    font-size: 19px;
+}
+
+.quarta p {
+    color: #a2a2a2;
+}
+
+.quinta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+}
+
+.quinta input:focus{
+    background-color:white;
+    color: #787878;
+    outline-color: green;   
+}
+
+.quinta button:focus {
+    text-align: center;
+    padding: 0px 24px;
+    outline-color: green;  
+}
+
+.sexto {
+    text-align: left;
+    color: #A2A2A2;
+    font-family: 'Source Sans Pro';
+    margin-bottom: 50px;
+}
+
+footer { 
+    background-image: url("overlay.png"), url("bg.jpg");
+    background-size: 400px 200px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Source Sans Pro';
+    padding: 60px 30px;
+    background-repeat: no-repeat;
+}
+
+footer a { 
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+}
+
+footer p {
+
+}

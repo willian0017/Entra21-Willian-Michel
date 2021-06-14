@@ -1,1 +1,8 @@
 section>div>p{palavra}*5
+
+    background-image: url("bg.jpg");
+    background-size: 400px 200px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Source Sans Pro';
+    padding: 36px 24px;
