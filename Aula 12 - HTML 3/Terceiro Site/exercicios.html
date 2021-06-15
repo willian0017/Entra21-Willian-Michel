@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="exercicio.css">
     <title>Strata | HTML5 UP</title>
@@ -20,19 +20,17 @@
                     crafted by <a href="#">HTML5 UP</a>.</h1>
             </div>
         </header>
-            <div>
-                <section class="segunda">
+        <div class="main">
+            <div class="segunda">
+                <section >
                     <h2>Ipsum lorem dolor aliquam ante commodo
                         <br>
                         magna sed accumsan arcu neque.</h2>
                         <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac
-                            <br> 
                             in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo 
-                            <br>
                             blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem 
-                            <br>
                             vulputate lorem neque cubilia.</p>
-                            <a href="#">Learn More</a>
+                           <ul><button><a href="#">Learn More</a></button> </ul> 
                 </section>
             </div>
 
@@ -68,9 +66,10 @@
                         <h3>Risus ornare lacinia</h3>  
                         <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>  
                     </div>
-                    <a href="#">Full Portfolio</a>
+                    <ul><button><a href="#">Full Portfolio</a></button> </ul> 
                 </section>
             </div>
+            
             <div>
                 <section class="quarta">
                     <h2>Get In Touch</h2>
@@ -80,35 +79,42 @@
                     </p>
                 </section>
             </div>
+
             <div>
                 <section class="quinta">
-                    <input type="Name">
-                    <input type="Email">
-                    <input type="Message">
-                    <button>Send Message</button>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input class="message" type="text" placeholder="Message" size="33" 
+                    maxlength="1000">
+                    <ul><button><a href="#">Send Message</a></button> </ul> 
                 </section>
             </div>
+
             <div>   
                     <section class="sexto">
-                        <p>1234 Somewhere Rd.
-                            <br>
+                        <ul>
+                            <h3><img src="home.png" alt="home"></h3>
+                            <li> 1234 Somewhere Rd. </li>
                             Nashville, TN 00000
                             <br>
-                            United States</p>
+                            <li> United States</li>
                             <br>
-                            000-000-0000
+                            <h3><img src="cell.png" alt="cell"></h3>
+                            <li> 000-000-0000 </li>
                             <br>
-                            <br>
-                            hello@untitled.tld
-                            <br>
+                            <h3><img src="email.png" alt="email"></h3>
+                            <li> hello@untitled.tld </li>
+                        </ul>
                     </section>
             </div>
     </div>
     <footer>
-        <a href="#">Twitter</a>
-        <a href="#">GitHub</a>
-        <a href="#">Bola</a>
-        <a href="#">Email</a>
+        <div>
+        <img src="twitter.svg" alt="twitter">
+        <img src="github.svg" alt="github">
+        <img src="bola.svg" alt="bola">
+        <img src="email.png" alt="email">
+        </div>
         <p>© Untitled.
             <br>
              Design: <a href="#">HTML5 UP</a>. 

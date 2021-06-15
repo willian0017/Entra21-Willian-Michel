@@ -1,25 +1,12 @@
-body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    display: block;
-}
-
-::before::after {
-    box-sizing: inherit;
-}
-
 header {
     text-align: center;
     background-image: url("overlay.png"), url("bg.jpg");
+    background-position: top left, center center;
     background-repeat: no-repeat;
     background-size: auto, cover;
     font-family: 'Source Sans Pro';
-    background-size: 360px;
-    padding: 50px;
+    background-size: 600px;
+    padding: 35px;
 }
 
 
@@ -37,7 +24,7 @@ header strong {
 
 header h1 {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 1.2em;
+    font-size: 1.32em;
     line-height: 1.75em;
     margin: 5;
 }
@@ -48,120 +35,255 @@ header a {
     color: rgba(255, 255, 255, 0.5);
 }
 
+
 .segunda {
     text-align: left;
     font-family: 'Source Sans Pro';
-    margin: 30px;
 }
 
 .segunda h2 {
     color: #787878;
-    font-size: 21px;
+    font-size: 1.35em;
+    line-height: 1.5em;
+    margin-top: -5px;
+    margin-bottom: 25px;
 }
+
 
 .segunda p {
     color: #A2A2A2;
     font-size: 16px;
+    line-height: 1.75em;
 }
 
-.segunda a {
+
+.segunda a, ul, button {
     text-decoration: none;
     color: #787878;
     text-align: center;
-    margin: 100px;
 }
+
+
+.segunda button {
+    margin-left: -50px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    display: inline-block;
+    padding: 15px 32px;
+    border: none;
+}
+
 
 .terceira {
-    text-align: left;
     font-family: 'Source Sans Pro';
     margin-bottom: 80px;
+    justify-content: left;
 }
+
 
 .terceira h2 {
-    font-size: 21px;
+    font-size: 19px;
     color: #787878;
 }
+
 
 .terceira h3 {
-    font-size: 15px;
     color: #787878;
+    font-size: 1em;
+    margin-top: 35px;
 }
+
 
 .terceira p {
-    color: #787878;
-    font-size: 13px;
+    color: #A2A2A2;
+    font-size: 11px;
     margin-top: -10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 0.8em;
 }
 
+
 .terceira img { 
-    width: 350px;
-    height: 200px;
+    background-image: transparent url("overlay.png") no-repeat;
+    background-position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     border-radius: 10px;
 }
 
-.terceira a {
-    color: #787878;
+
+.terceira a, ul, button {
     text-decoration: none;
-    margin: 100px;
+    color: #787878;
+    text-align: center;
+}
+
+
+.terceira button {
+    margin-left: -50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 15px 32px;
+    border: none;
 }
 
 .quarta { 
     text-align: left;
     font-family: 'Source Sans Pro';
+    line-height: 1.75em;
+    font-weight: 400;
 }
+
 
 .quarta h2 {
     color: #787878;
     font-size: 19px;
+    font-weight: bold;
+    font-size: 1.2em;
 }
+
 
 .quarta p {
     color: #a2a2a2;
+    font-size: 1.0em;
+    font-weight: bold;
 }
+
 
 .quinta {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-family: 'Source Sans Pro';
+    resize: none;
+    color: #A2A2A2;
 }
+
+.quinta input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    font-weight: bold;
+    color: #A2A2A2;
+    resize: none;
+}
+
+
+.quinta .message {
+    width: 100%;
+    height: 150px;
+    border-collapse:collapse; 
+}
+
 
 .quinta input:focus{
     background-color:white;
     color: #787878;
-    outline-color: green;   
+    outline-color: #49bf9d;
+    width: 100%;    
+    resize: none; 
 }
+
 
 .quinta button:focus {
     text-align: center;
     padding: 0px 24px;
-    outline-color: green;  
+    outline-color: #49bf9d;
 }
 
+
+.quinta a, ul, button {
+    text-decoration: none;
+    color: #787878;
+    text-align: center;
+}
+
+
+.quinta button {
+    margin-left: -50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border: none;
+}
+
+
 .sexto {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+
+.sexto ul {
     text-align: left;
     color: #A2A2A2;
     font-family: 'Source Sans Pro';
-    margin-bottom: 50px;
+    list-style-type: none;
+    line-height: 1.2em;
+    padding-left: 2.25em;
+    font-size: 16px;
+    display: inline;
 }
+
+
+.sexto img, h3 {
+    color:#A2A2A2;
+}
+
+
+.sexto img {
+    margin-right: 10px;
+    display: inline;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
 
 footer { 
     background-image: url("overlay.png"), url("bg.jpg");
-    background-size: 400px 200px;
+    background-size: 400px 300px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
     font-family: 'Source Sans Pro';
-    padding: 60px 30px;
+    padding: 35px 30px;
     background-repeat: no-repeat;
 }
+
+
+footer p { 
+    font-size: 13px;
+    line-height: 2.5em;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.5);
+}
+
 
 footer a { 
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 12px;
 }
 
-footer p {
 
+footer img, div {
+    display: inline;
+    color: rgba(255, 255, 255, 0.5);
+    width: 32px;
+    height: 32px;
+    padding: 5px
+}
+
+
+.main {
+    padding: 25px;
+    padding-top: 35px;
+}
+
+
+body {
+    font-weight: bold;
 }
