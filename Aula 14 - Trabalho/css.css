@@ -7,7 +7,7 @@
 }
 
 .primeiro h2 {
-    color: black;
+    color: rgb(77, 77, 77);
     font-size: 40px;
     font-weight: inherit;
     font-family: 'Bebas Neue';
@@ -102,6 +102,7 @@
 
 .terceiro hr {
     border: 4px solid rgba(184, 181, 181, 0.623);
+    border-radius: 0px 100px 0px 0px;
 }
 
 .quarto h3 {
@@ -142,6 +143,7 @@
 }
 .quarto hr {
     border: 4px solid rgba(184, 181, 181, 0.623);
+    border-radius: 0px 100px 0px 0px;
 }
 
 .quinto h3 {
@@ -174,15 +176,19 @@
     color: rgb(100, 100, 100);
     text-align: left;
     margin-left: 15px;
-  
 }
+
+
 .quinto a {
     text-decoration: none;
     color: rgb(0,154,111);
 }
+
+
 .quinto hr {
     border: 4px solid rgba(184, 181, 181, 0.623);
 }
+
 
 .sexto h3 {
     font-family: 'PT Sans';
@@ -194,11 +200,13 @@
     margin-top: 50px;
 }
 
+
 .sexto h2 {
     font-family: 'Roboto';
     font-size: 18px;
     color: black;
 }
+
 
 .sexto img{
     width: 100%;
@@ -208,6 +216,7 @@
     height: 200px;
 }
 
+
 .sexto p {
     font-family: 'PT Sans';
     font-size: 15px;
@@ -216,13 +225,185 @@
     margin-left: 15px;
   
 }
+
+
 .sexto a {
     text-decoration: none;
     color: rgb(0,154,111);
 }
+
+
 .sexto hr {
     border: 4px solid rgba(184, 181, 181, 0.623);
+    border-radius: 0px 100px 0px 0px;
 }
+
+.hitens h2 {
+    color: rgb(77, 77, 77);
+    font-size: 40px;
+    font-weight: inherit;
+    font-family: 'Bebas Neue';
+    text-align: center;
+}
+
+
+.hitens ul, .hitens a {
+    font-family: 'PT Sans';
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    background: rgb(0,154,111);
+    background: linear-gradient(0deg, rgba(0,154,111,1) 0%, rgba(0,143,100,1) 100%);
+    margin: 10px;
+    border-radius: 2px;
+}
+
+.hitens a {
+    margin-left: -35px;
+}
+
+
+.hitens p {
+    color:rgb(71, 71, 71);
+    text-align: center;
+    font-family: 'PT Sans';
+}
+
+
+.hitens img{
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+}
+
+
+.itens h3 {
+    font-family: 'PT Sans';
+    font-size: 25px;
+    color: rgb(71, 71, 71);
+    text-align: left;
+    font-weight: inherit;
+    margin-bottom: 10px;
+}
+
+.itens hr {
+    border: 4px solid rgba(184, 181, 181, 0.623);
+    border-radius: 0px 100px 0px 0px;
+}
+
+
+.itens p, .itens a {
+    font-family: 'PT Sans';
+    font-size: 15px;
+    color: rgb(0,154,111);
+    text-align: left;
+    text-decoration: none;
+}
+
+.itens h4 {
+    font-family: 'PT Sans';
+    font-weight: inherit;
+    color: rgb(56, 56, 56);
+    text-align: left;
+    font-size: 15px;
+}
+
+.itens2 h3 {
+    font-family: 'PT Sans';
+    font-size: 25px;
+    color: rgb(71, 71, 71);
+    text-align: left;
+    font-weight: inherit;
+    margin-bottom: 10px;
+}
+
+.itens2 hr {
+    border: 4px solid rgba(184, 181, 181, 0.623);
+    border-radius: 0px 100px 0px 0px;
+}
+
+
+.itens2 p, .itens2 a {
+    font-family: 'PT Sans';
+    font-size: 15px;
+    color: rgb(0,154,111);
+    text-align: left;
+    text-decoration: none;
+}
+
+.itens2 h4 {
+    font-family: 'PT Sans';
+    font-weight: inherit;
+    color: rgb(56, 56, 56);
+    text-align: left;
+    font-size: 15px;
+}
+
+.itens3 h3 {
+    font-family: 'PT Sans';
+    font-size: 25px;
+    color: rgb(71, 71, 71);
+    text-align: left;
+    font-weight: inherit;
+    margin-bottom: 10px;
+}
+
+.itens3 hr {
+    border: 4px solid rgba(184, 181, 181, 0.623);
+    border-radius: 0px 100px 0px 0px;
+}
+
+
+.itens3 p, .itens3 a {
+    font-family: 'PT Sans';
+    font-size: 15px;
+    color: rgb(0,154,111);
+    text-align: left;
+    text-decoration: none;
+}
+
+.itens3 h4 {
+    font-family: 'PT Sans';
+    font-weight: inherit;
+    color: rgb(56, 56, 56);
+    text-align: left;
+    font-size: 15px;
+}
+
+
+.itens4 h3 {
+    font-family: 'PT Sans';
+    font-size: 25px;
+    color: rgb(71, 71, 71);
+    text-align: left;
+    font-weight: inherit;
+    margin-bottom: 10px;
+}
+
+.itens4 hr {
+    border: 4px solid rgba(184, 181, 181, 0.623);
+    border-radius: 0px 100px 0px 0px;
+}
+
+
+.itens4 p, .itens4 a {
+    font-family: 'PT Sans';
+    font-size: 15px;
+    color: rgb(0,154,111);
+    text-align: left;
+    text-decoration: none;
+}
+
+.itens4 h4 {
+    font-family: 'PT Sans';
+    font-weight: inherit;
+    color: rgb(56, 56, 56);
+    text-align: left;
+    font-size: 15px;
+}
+
 
 @media (min-width: 480px) {
     .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
@@ -245,10 +426,37 @@
         font-size: 30px;
     }
     .segundo h2, .terceiro h2, .quarto h2, .quinto h2, .sexto h2  {
-            font-size: 20px;
+        font-size: 20px;
+    }
+    .hitens img {
+        width: 100%;
+        height: 300px;
+    }
+    .hitens h2 {
+        font-size: 55px;
+    }
+    .hitens ul, .hitens a {
+        font-size: 20px;
+    }
+    .hitens p {
+        font-size: 18px;
+    }
+    .hitens p, .itens2 p, .itens3 p, .itens4 p, .itens p  {
+        font-size: 17px;
+    }
+    .itens2 a, .itens3 a, .itens4 a, .itens a {
+        font-size: 17px;
+    }
+    .hitens h3, .itens h3, .itens3 h3, .itens4 h3, .itens h3  { 
+        font-size: 30px;
+    }
+    .itens2 h4, .itens3 h4, .itens4 h4, .itens h4  {
+        font-size: 20px;
+    }
     }
 
-@media (min-width: 737px) {
+
+@media (min-width: 768px) {
     .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
         width: 100%;
         height: 450px;
@@ -271,23 +479,66 @@
     .segundo h2, .terceiro h2, .quarto h2, .quinto h2, .sexto h2  {
             font-size: 23px;
     }
-}
-
-@media (min-width: 981px) {
-    .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
+    .hitens img {
         width: 100%;
-        height: 600px;
+        height: 450px;
     }
-    .primeiro h2 {
-        font-size: 105px;
+    .hitens h2 {
+        font-size: 70px;
     }
-    .primeiro ul, .primeiro a {
+    .hitens ul, .hitens a {
         font-size: 24px;
     }
-    .primeiro p {
-        font-size: 26px;
+    .hitens p {
+        font-size: 22px;
     }
+    .itens2 p, .itens3 p, .itens4 p, .itens p  {
+        font-size: 20px;
+    }
+    .itens2 a, .itens3 a, .itens4 a, .itens a {
+        font-size: 20px;
+    }
+    .hitens h3, .itens h3, .itens3 h3, .itens4 h3, .itens h3  { 
+        font-size: 32px;
+    }
+    .itens2 h4, .itens3 h4, .itens4 h4, .itens h4  {
+        font-size: 23px;
+    }
+    }
+
+@media screen and (min-width: 1024px) {
+    .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .primeiro {
+        display: flex;
+        background: rgb(0,154,111);
+        background: linear-gradient(0deg, rgba(0,154,111,1) 0%, rgba(0,143,100,1) 100%);
+    }
+    .primeiro h2 {
+        font-size: 55px;
+        text-align: left;
+        padding: 15px;
+    }
+    .primeiro ul, .primeiro a {
+        font-size: 22px;      
+        margin-left: 50px;
+        display: inline-flex;
+        background:none;
+        color: black;
+        position: relative; bottom:66px; left:80px;
+    }
+    
+    .primeiro p {
+        font-size: 25px;
+    }
+
     .segundo p, .terceiro p, .quarto p, .quinto p, .sexto p  {
+        font-size: 25px;
+    }
+    .itens2 a, .itens3 a, .itens4 a, .itens a {
         font-size: 25px;
     }
     .segundo h3, .terceiro h3, .quarto h3, .quinto h3, .sexto h3  {
@@ -296,19 +547,29 @@
     .segundo h2, .terceiro h2, .quarto h2, .quinto h2, .sexto h2  {
             font-size: 28px;
     }
+    .hitens img {
+        width: auto;
+        height: 900px;
     }
-}
-
-@media (min-width: 1100px) {
-    .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
-        width: 100%;
-        height: 700px;
+    .hitens h2 {
+        font-size: 155px;
     }
-}
-
-@media (min-width: 1500px) {
-    .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
-        width: 100%;
-        height: auto;    
+    .hitens ul, .hitens a {
+        font-size: 24px;
     }
-}
+    .hitens p {
+        font-size: 30px;
+    }
+    .itens2 p, .itens3 p, .itens4 p, .itens p  {
+        font-size: 20px;
+    }
+    .itens2 a, .itens3 a, .itens4 a, .itens a {
+        font-size: 20px;
+    }
+    .hitens h3, .itens h3, .itens3 h3, .itens4 h3, .itens h3  { 
+        font-size: 40px;
+    }
+    .itens2 h4, .itens3 h4, .itens4 h4, .itens h4  {
+        font-size: 28px;
+    }
+    }
