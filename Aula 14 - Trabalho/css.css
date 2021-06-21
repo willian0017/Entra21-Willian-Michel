@@ -3,7 +3,6 @@
     text-align: center;
     width: 100%;
     margin-top: 20px;
-
 }
 
 .primeiro h2 {
@@ -24,6 +23,11 @@
     background: linear-gradient(0deg, rgba(0,154,111,1) 0%, rgba(0,143,100,1) 100%);
     margin: 10px;
     border-radius: 2px;
+    list-style: none;
+}
+
+.primeiro ul li a:hover{
+    color: rgb(0,154,111);;
 }
 
 .primeiro a {
@@ -508,68 +512,144 @@
 
 @media screen and (min-width: 1024px) {
     .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
-        width: 100%;
-        height: auto;
+        width: 50%;
+        height: 50%;
+        margin-left: 220px;
     }
 
     .primeiro {
         display: flex;
-        background: rgb(0,154,111);
-        background: linear-gradient(0deg, rgba(0,154,111,1) 0%, rgba(0,143,100,1) 100%);
+        padding: 35px;
     }
     .primeiro h2 {
         font-size: 55px;
         text-align: left;
         padding: 15px;
+        background-color: white;
     }
     .primeiro ul, .primeiro a {
-        font-size: 22px;      
+        font-size: 20px;      
         margin-left: 50px;
         display: inline-flex;
         background:none;
-        color: black;
+        color: rgb(48, 48, 48);
         position: relative; bottom:66px; left:80px;
     }
     
     .primeiro p {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .segundo p, .terceiro p, .quarto p, .quinto p, .sexto p  {
-        font-size: 25px;
+        font-size: 15px;
     }
     .itens2 a, .itens3 a, .itens4 a, .itens a {
         font-size: 25px;
     }
     .segundo h3, .terceiro h3, .quarto h3, .quinto h3, .sexto h3  {
-        font-size: 40px;
+        font-size: 32px;
     }
     .segundo h2, .terceiro h2, .quarto h2, .quinto h2, .sexto h2  {
-            font-size: 28px;
+            font-size: 25px;
     }
     .hitens img {
-        width: auto;
-        height: 900px;
+        width: 50%;
+        height: 50%;
+        margin-left: 250px;
     }
     .hitens h2 {
-        font-size: 155px;
+        font-size: 55px;
     }
     .hitens ul, .hitens a {
-        font-size: 24px;
+        font-size: 20px;     
+        background:none;
+        color: rgb(0,154,111);
     }
     .hitens p {
-        font-size: 30px;
+        font-size: 17px;
+    }
+    .itens2 p, .itens3 p, .itens4 p, .itens p  {
+        font-size: 17px;
+    }
+    .itens2 a, .itens3 a, .itens4 a, .itens a {
+        font-size: 16px;
+    }
+    .hitens h3, .itens h3, .itens3 h3, .itens4 h3, .itens h3  { 
+        font-size: 26px;
+    }
+    .itens2 h4, .itens3 h4, .itens4 h4, .itens h4  {
+        font-size: 18px;
+    }
+    }
+
+    @media screen and (min-width: 1200px) {
+    .segundo img, .terceiro img, .quarto img, .quinto img, .sexto img {
+        width: 50%;
+        height: 50%;
+        margin-left: 300px;
+    }
+
+    .primeiro {
+        display: flex;
+        padding: 35px;
+    }
+    .primeiro h2 {
+        font-size: 55px;
+        text-align: left;
+        padding: 15px;
+        background-color: white;
+    }
+    .primeiro ul, .primeiro a {
+        font-size: 18px;      
+        margin-left: 50px;
+        display: inline-flex;
+        background:none;
+        color: rgb(48, 48, 48);
+        position: relative; bottom:66px; left:80px;
+    }
+    
+    .primeiro p {
+        font-size: 18px;
+    }
+
+    .segundo p, .terceiro p, .quarto p, .quinto p, .sexto p  {
+        font-size: 18px;
+    }
+    .itens2 a, .itens3 a, .itens4 a, .itens a {
+        font-size: 25px;
+    }
+    .segundo h3, .terceiro h3, .quarto h3, .quinto h3, .sexto h3  {
+        font-size: 32px;
+    }
+    .segundo h2, .terceiro h2, .quarto h2, .quinto h2, .sexto h2  {
+            font-size: 25px;
+    }
+    .hitens img {
+        width: 50%;
+        height: 50%;
+        margin-left: 300px;
+    }
+    .hitens h2 {
+        font-size: 55px;
+    }
+    .hitens ul, .hitens a {
+        font-size: 20px;     
+        background:none;
+        color: rgb(0,154,111);
+    }
+    .hitens p {
+        font-size: 20px;
     }
     .itens2 p, .itens3 p, .itens4 p, .itens p  {
         font-size: 20px;
     }
     .itens2 a, .itens3 a, .itens4 a, .itens a {
-        font-size: 20px;
+        font-size: 16px;
     }
     .hitens h3, .itens h3, .itens3 h3, .itens4 h3, .itens h3  { 
-        font-size: 40px;
+        font-size: 30px;
     }
     .itens2 h4, .itens3 h4, .itens4 h4, .itens h4  {
-        font-size: 28px;
+        font-size: 18px;
     }
     }
