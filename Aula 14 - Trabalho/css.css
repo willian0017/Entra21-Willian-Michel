@@ -536,8 +536,7 @@
             background:none;
             color: white;
             position: relative; bottom:60px; left:80px;
-            justify-content: center
-
+            justify-content: center;
         }
         .segundo hr { 
                 border: 2px solid rgba(184, 181, 181, 0.623);
@@ -594,15 +593,21 @@
 
         .itens2 p, .itens3 p, .itens4 p, .itens p  {
             font-size: 20px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .itens2 a, .itens3 a, .itens4 a, .itens a {
             font-size: 16px;
         }
-        .hitens h3, .itens h3, .itens3 h3, .itens4 h3, .itens h3  { 
-            font-size: 30px;
+        .hitens h3, .itens2 h3, .itens3 h3, .itens4 h3, .itens h3  { 
+            margin-top: 35px;
+            font-size: 23px;
+            text-align: center;
         }
         .itens2 h4, .itens3 h4, .itens4 h4, .itens h4  {
+            margin-top: 35px;
             font-size: 18px;
+            text-align: center;
         }
         }
