@@ -624,15 +624,20 @@
     
         .segundo p, .terceiro p, .quarto p, .quinto p, .sexto p  {
             font-size: 18px;
+            text-align: center;
+            margin-bottom: 70px;
         }
         .itens2 a, .itens3 a, .itens4 a, .itens a {
             font-size: 25px;
         }
         .segundo h3, .terceiro h3, .quarto h3, .quinto h3, .sexto h3  {
             font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
         }
         .segundo h2, .terceiro h2, .quarto h2, .quinto h2, .sexto h2  {
                 font-size: 25px;
+                text-align: center;
         }
         .hitens img {
             width: 50%;
