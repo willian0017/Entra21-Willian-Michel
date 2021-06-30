@@ -1,0 +1,175 @@
+1)
+    
+            <div>
+            <form>        
+                <ul>
+                    <li>
+                        <label for="uname">Nome de usuário</label>
+                        <input required type="text" name="uname" id="uname">
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" required>
+                    </li>
+                    <li>
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" required >
+                    </li>
+                    <li>
+                        <label for="comment">Comentário:</label>
+                        <textarea required name="comment" id="comment">
+                        </textarea>
+                    </li>
+                    <li>
+                        <button>Enviar comentário</button>
+                    </li>
+                </ul>
+            </form>
+            </div>
+
+2)
+
+                <div contenteditable="true"></div>
+
+3)
+
+            <style>
+        body {
+            margin: 0;
+        }
+    
+        pre {
+            display: inline-block;
+            margin: 0;        
+            position: fixed;
+        }
+    
+        pre:focus {
+            outline: 1px dotted black;
+        }
+    </style>
+    
+    <body>
+        <pre tabindex="0">
+    (q\_/p)
+     /. .\
+    =\_t_/=   __
+     /   \   (
+    ((   ))   )
+    /\) (/\  /
+    \  Y  /-'
+     nn^nn
+        </pre>
+
+    
+        <script>
+            let rato = document.querySelector("pre")    
+            rato.addEventListener("click", () => {
+                rato.focus()            
+                rato.style.left = rato.getBoundingClientRect().left
+                rato.style.top = rato.getBoundingClientRect().top
+            })
+            rato.addEventListener("keydown", (e) => {
+                console.log(e.key)
+                switch (e.key) {
+                    case "ArrowRight": 
+                        rato.style.left = parseInt(rato.style.left) + rato.clientWidth + "px"
+                        break
+                    case "ArrowUp":
+                         rato.style.top = parseInt(rato.style.top) - rato.clientWidth + "px"
+                        break
+                    case "ArrowDown":
+                    rato.style.top = parseInt(rato.style.top) + rato.clientWidth + "px"
+                        break
+                    case "ArrowLeft":
+                    rato.style.left = parseInt(rato.style.left) - rato.clientWidth + "px"
+                        break
+                }
+            })
+        </script>
+    </body>
+
+4)
+        <div>
+            <form>
+                <label>
+                    Digite o valor
+                    <input name="valor" type="text" value = "10000">
+                </label><br>
+                <label>
+                    Digite os meses
+                <input name="meses" type="text" value = "12">
+                </label><br>
+                <label>
+                    Juros por ano
+                <input name="juros" type="text" value = "5">
+                </label>
+            </form>
+            <output id="valor-inicial" >valor inicial: 0</output><br>
+            <output id="valor-final">valor final: 0</output>
+        </div>
+        <script>
+
+            let inputInicial = document.querySelector("form").valor,
+                inputMeses = document.querySelector("form").meses,
+                inputJuros = document.querySelector("form").juros
+
+            function calculaJuros(inicial, juros, anos) {   
+            
+                return Math.round(inicial * (1 + juros * anos))
+            }
+
+            function atualizaValores() {
+                let pInicial = document.querySelector("#valor-inicial"),
+                    pFinal = document.querySelector("#valor-final")
+
+                let valorInicial = +inputInicial.value,
+                    porcentagemJuros = +inputJuros.value / 100,
+                    anos = +inputMeses.value / 12
+
+                let resultado = calculaJuros(valorInicial, porcentagemJuros, anos)
+                pInicial.textContent = "Valor inicial: " + inputInicial.value
+                pFinal.textContent = "Valor final: " + resultado
+            }
+
+            inputInicial.addEventListener("input", atualizaValores)
+            inputMeses.addEventListener("input", atualizaValores)
+            inputJuros.addEventListener("input", atualizaValores)
+
+
+        </script>
+
+5)
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                form {
+                    text-align: center;
+                    margin-top: 450px;
+                }
+            </style>
+        </head>
+        <div>
+            <form class="modal-content" action="/action_page.php">
+                <button onclick="document.getElementById('id01').style.display='block'">Abrir Modal</button>
+                <label>
+                    Digite uma mensagem:
+                    <input type="text">
+                </label>
+                <input type="submit" name="ok" value="Ok">
+                <input type="button" name="cancel" value="Cancelar" onclick="window.location='index.html'" />
+            </form>
+        </div>
+        <script>
+            function mostrarModal(html, callback) {
+                let html,
+                    callback = "text"
+                return mostrarModal(html, callback)
+            }
+            alert(mostrarModal(html, callback))
+        </script>
+
+6)

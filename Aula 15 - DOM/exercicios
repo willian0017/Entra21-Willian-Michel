@@ -1,0 +1,23 @@
+1)
+<ol id="elem">
+        <li>Filho 1</li>
+        <li>Filho 2</li>
+    </ol>
+    <script>
+        let elem = document.querySelector("ol")
+        elem.remove()
+    </script>
+
+2)
+<ul>
+            <li>Item 1</li>
+            <li>Item 4</li>
+        </ul>
+        <script>
+            let li = document.createElement("li");
+            document.body.appendChild(li);
+              
+        </script>
+
+
+3)

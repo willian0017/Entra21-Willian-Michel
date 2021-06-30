@@ -1,0 +1,134 @@
+1) Crie um objeto Date para a data: Feb 20, 2012, 3:12am
+
+    <p id="data"></p>
+    <script>
+        let d = new Date(2012, 1, 20, 3, 12, 0, 0);
+        document.getElementById("data").innerHTML = d;
+    </script>
+
+2) Crie uma função obtemDiaSemana(data) para mostrar o dia da semana no formato: 
+
+       let day = new Date().getDay();
+        function obtemDiaSemana(data){
+        switch (data.getDay()) {
+            case 0:
+              day = "Domingo";
+              break
+            case 1:
+              day = "Segunda";
+              break
+            case 2:
+               day = "Terça";
+              break
+            case 3:
+              day = "Quarta";
+              break
+            case 4:
+              day = "Quinta";
+              break
+            case 5:
+              day = "Sexta";
+              break
+            case 6:
+              day = "Sábado";
+            return alert (day)
+        }
+        }
+
+3) Crie uma função obtemUltimoDiaMes(ano, mes) que retorna o último dia do mês.
+
+        let ano = 2021
+        let mes = 1
+        function ultimoDia(ano, mes) {
+            return new Date(ano, mes + 1, 0).getDate();
+        }
+        console.log(ultimoDia(ano, mes));
+
+4) Escreva uma função obtemSegundos() que retorna o número de segundos
+do dia atual
+
+        let hora = new Date().getHours();
+        let min = new Date().getMinutes();
+        
+        function obtemSegundos() {
+            return (hora * 60 * 60, min * 60)
+        }
+        console.log(obtemSegundos())
+
+5) Crie uma função segundosParaAmanha() que retorna o número de segundos
+até o próximo dia.
+Exemplo: 23:00 -> segundosParaAmanha() == 3600
+
+        let hora = new Date().getHours();
+        let min = new Date().getMinutes()
+        
+        function segundosParaAmanha() {
+            return (hora * 60 * 60, min * 60)
+        }
+        console.log(segundosParaAmanha())
+
+6) Escreva a função formataData(data). Ela deve formatar a data
+da seguinte maneira:
+    * Se desde a data passou menos de 1 segundo -> "agora"
+    * Se desde a data passou menos de 1 minuto -> "n segundos atrás" onde n é a quantidade de segundos
+    * Se desde a data passou menos de 1 hora -> "m minutos atrás" onde m é a quantidade de minutos
+    * Nos outros casos a data deve ser apresentada no seguinte formato: "DD.MM.YY HH:mm" 
+      Ex.: 28.06.21 10:00
+      Testes:
+      formatDate(new Date(new Date - 1)) // agora
+      formatDate(new Date(new Date - 30 * 1000)) // 30 segundos atras
+      formatDate(new Date(new Date - 5 * 60 * 1000)) // 5 minutos atrás
+
+    
+        let hora = new Date ().getHours()
+        let min = new Date ().getMinutes()
+        let seg = new Date ().getSeconds()
+        let data = (new Date(new Date - 1).getHour())
+
+        function formataData(data) {
+            return 
+        }
+
+
+        if (seg < 1) {
+            console.log ("agora")
+        }
+        else if (min < 60) {
+            console.log (`passou ${seg} segundos`)
+        }
+        else if (hora < 60) {
+            console.log (`passou ${min} segundos`)
+        }
+
+        console.log(`28.06.21 ${hora}:${min}`)
+
+
+        ___________________________________________________________
+        let hora = new Date ().getHours()
+        let min = new Date ().getMinutes()
+        let seg = new Date ().getSeconds()
+        let data = (new Date(new Date - 5).getHours())
+        console.log(hora, min, seg, data)
+        function formataData(data) {
+            return 
+        }
+        ___________________________________________________________
+        
+        let tempo = new Date(1625067020000).getTime()
+        let agora = new Date ().getHours()
+
+
+        if (tempo < 1000) {
+            console.log("agora")
+        }
+        
+        if (tempo > 60000) {
+            console.log("passou mais de 30 minutos")
+        }
+
+        if (tempo > 360000) {
+            console.log("passou mais de 1 hora")
+        }
+
+        console.log(tempo, agora)
+

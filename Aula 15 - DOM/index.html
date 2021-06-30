@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: fixed;            
+            top: 10px;
+        }
+        p {
+            margin-top: 1500px;
+        }
+        #botao:hover {
+        background-color: #555;
+    }
+    </style>
+        <button onclick="topFunction()" id="botao" title="Go to top">Top</button>
+    </head>
+    <body>
+    <div class="mostrar-scroll">0px</div>
+    <p>Escondido</p>
+    <script>
+        function topFunction() {
+          document.documentElement.scrollTop = 0;
+        }
+     </script>    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            form {
+                text-align: center;
+                margin-top: 450px;
+            }
+        </style>
+    </head>
+    <div>
+        <form class="modal-content" action="/action_page.php">
+            <button onclick="document.getElementById('id01').style.display='block'">Abrir Modal</button>
+            <label>
+                Digite uma mensagem:
+                <input type="text">
+            </label>
+            <input type="submit" name="ok" value="Ok">
+            <input type="button" name="cancel" value="Cancelar" onclick="window.location='index.html'" />
+        </form>
+    </div>
+    <script>
+        function mostrarModal(html, callback) {
+            let html,
+                callback = "text"
+            return mostrarModal(html, callback)
+        }
+        alert(mostrarModal(html, callback))
+    </script>
+
+</html>
