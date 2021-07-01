@@ -104,15 +104,13 @@ da seguinte maneira:
 
 
         ___________________________________________________________
-        let hora = new Date ().getHours()
+        let data = new Date(1625067020000).getTime()
+        let hora = date.getHours();
         let min = new Date ().getMinutes()
         let seg = new Date ().getSeconds()
-        let data = (new Date(new Date - 5).getHours())
-        console.log(hora, min, seg, data)
         function formataData(data) {
-            return 
-        }
-        ___________________________________________________________
+            
+        }_______________________________________________________
         
         let tempo = new Date(1625067020000).getTime()
         let agora = new Date ().getHours()
@@ -132,3 +130,59 @@ da seguinte maneira:
 
         console.log(tempo, agora)
 
+7) Escreva a função imprimeNumeros(comeco, fim) que mostre um número a cada segundo, começando
+do comeco até o fim.
+
+  Faça duas variantes da solução:
+  1. Usando setInterval
+  2. Usando setTimeout
+  
+
+    let inicio = 1
+    let fim = 5
+    let idSetInterval = setInterval(() => {
+        imprimeNumeros()            
+    }, 1000)
+    function imprimeNumeros() {              
+        console.log(inicio)
+        inicio++
+        if (inicio >= fim) clearInterval(idSetInterval)            
+    }  
+
+        let comeco = 1
+        let fim = 5
+        function imprimeNumeros(comeco, fim) {
+            function rodaTimer() {
+            console.log(comeco)
+            if (comeco <= fim) {
+            setTimeout(rodaTimer, 1000)
+            return 
+            }
+        }
+    }
+
+8) Utilizando setInterval faça um relógio que obtenha o horário atual
+e faça ele aparecer na tela no formato: 
+hh:mm:ss
+
+    let idSetInterval = setInterval(() => {
+	    timer()
+        }, 1000);
+
+    function timer() {
+    	let horario = new Date();
+    	let hora = horario.toLocaleTimeString();
+    	document.getElementById("relogio").innerHTML = hora;
+    };
+
+
+9) Faça uma cronômetro através da função criaCronometro(tempo, callback) que receba o valor inicial através de um <input type="time"> 
+e dispare uma função callback quando o tempo acabar.
+
+    </head>
+        <input type="time" id="time">
+  <body>
+    <script>
+        function timer() {
+
+        }
