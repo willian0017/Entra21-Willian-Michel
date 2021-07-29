@@ -1,0 +1,109 @@
+ 
+        
+2) Implemente um script que consuma a api: https://rickandmortyapi.com/.       
+* Crie uma página que carregue 9 personagens aleatórios e os mostre em cards.
+* Crie uma página que permita selecionar um episódio e mostra todos os personagens que fizeram parte daquele episódio.       
+* Crie uma página que mostre todos os Ricks que estão vivos.
+*/
+
+    <style>
+        .gatos {
+            display: inline-grid;
+            grid-template-columns: auto auto auto auto auto;
+        }
+
+        .gatos img {
+            width: 300px;
+            height: 200px;
+            margin: 8px;
+            border-radius: 5px;
+        }
+    </style>
+
+        <div class="gatos">
+
+        </div>
+    <body>
+        <script>
+            async function getCat() {
+                let response = await fetch("https://api.thecatapi.com/v1/images/search?mime_types=gif", {
+                    headers: {
+                        "x-api-key": "ea2c9cfc-5fe7-46fa-adf1-9c741d90259a"
+                    }
+                });
+
+                let body = await response.json();
+                console.log(body)
+                obtemGatos();
+            }
+
+            async function obtemGatos() {
+                const response = await fetch("https://api.thecatapi.com/v1/images/search?mime_types=gif&limit=10");
+                const body = await response.json();
+
+                for (let cat of body) {
+                    createCatImage(cat.url);
+                }
+            }
+
+            function createCatImage(url) {
+                const img = document.createElement("img");
+
+                img.src = url;
+                document.querySelector(".gatos").append(img)
+            }
+
+            getCat();        
+        </script>
+
+
+3
+        <!-- <style>
+            .rick {
+                display: inline-grid;
+                grid-template-columns: auto auto auto auto auto;
+            }
+
+            .rick img {
+                width: 300px;
+                height: 200px;
+                margin: 8px;
+                border-radius: 5px;
+            }
+        </style> -->
+
+        <div class="rick">
+
+        </div>
+
+        <body>
+        <script>
+            async function getRick() {
+                let response = await fetch("https://rickandmortyapi.com/api/character", {
+                    headers: {
+                        "x-api-key": "ea2c9cfc-5fe7-46fa-adf1-9c741d90259a"
+                    }
+                });
+
+                let body = await response.json();
+                console.log(body)
+                obtemRick();
+            }
+            async function obtemRick() {
+                const response = await fetch("https://rickandmortyapi.com/api/character/avatar/1.jpeg");
+                const body = await response.json();
+
+                for (let avatar of body) {
+                    createRickImage(avatar.url);
+                }
+            }
+
+            function createRickImage(url) {
+                const img = document.createElement("img");
+                // createRickImage(body[0].url);
+                img.src = url;
+                document.querySelector(".rick").append(img)
+            }
+
+            getRick();
+            </script> .

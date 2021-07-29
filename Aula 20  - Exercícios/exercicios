@@ -1,0 +1,134 @@
+1) Crie uma função somar(n1, n2, cb) que some dois números após 2 segundos, se o resultado for par irá chamar
+a callback passando o resultado calculado, caso seja ímpar irá chamar a callback passando um erro com a mensagem "O valor é 
+callback(error, result) => Se um erro for passado irá mostrar a mensagem: "A operação falhou! [mensagem do erro]".
+Senão, irá mostrar a mensagem: "A operação foi bem sucedida! O número [result] é par".
+
+    let n1 = +prompt("Digite primeiro número")
+    let n2 = +prompt("Digite segundo número")
+    
+    function somar(n1, n2, callback) { 
+        setTimeout(() => {
+            soma = n1 + n2
+            if (soma % 2 != 0) {
+                return callback(new Error("O valor é ìmpar"))
+            }
+            callback(null, soma) 
+        }, 2000)  
+    }
+    
+    function callback(error, soma) {
+        if (error) {
+            console.log(error.message)
+        } else {
+            console.log(`A operação foi bem sucedida! O número ${soma} é par`)
+        }
+    }
+    
+    somar(n1, n2, callback)
+
+2) Crie uma função dobrarEm5Segundos(numero, cb) que dobre o valor de um número após 5 segundos. Se o valor recebido não for um número
+ele irá chamar a cb passando um erro. 
+callback(error, result) => Se um erro for passado irá mostrar a mensagem: "A operação falhou! [mensagem do erro]".
+Senão, irá mostrar a mensagem: "A operação foi bem sucedida! O resultado é [result]".
+
+     let numero = +prompt("Digite um número")
+ 
+        function dobrarEm5Segundos(numero, callback) {
+            console.log("Calculando, aguarde...")
+            setTimeout(() => {
+                resultado = numero * 2
+                callback(null, resultado) 
+            }, 5000)
+        }
+ 
+        function callback(error, resultado) {
+            if (error) {
+                console.log(error.message)
+            } else {
+                console.log(`A operação foi bem sucedida! O resultado é ${resultado}`);
+            }
+        }
+        
+        if (isNaN(numero)) { 
+            callback(new Error("Operação falhou!"))  
+        }
+        
+        dobrarEm5Segundos(numero, callback)
+
+1) Crie uma função somar(n1, n2, cb) que some dois números após 2 segundos, se o resultado for par irá chamar
+a callback passando o resultado calculado, caso seja ímpar irá chamar a callback passando um erro com a mensagem "O valor é 
+callback(error, result) => Se um erro for passado irá mostrar a mensagem: "A operação falhou! [mensagem do erro]".
+Senão, irá mostrar a mensagem: "A operação foi bem sucedida! O número [result] é par".
+        let n1 = +prompt("Digite o primeiro número")
+        let n2 = +prompt("Digite o segundo número")
+ 
+        function somar(n1, n2) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    soma = n1 + n2
+                    if (soma % 2 != 0) {
+                        reject(new Error("O valor é ìmpar"))
+                    }
+                    resolve(soma)
+                }, 2000)
+            })
+        }
+ 
+        somar(n1, n2)
+            .then(soma => {
+                console.log(`A operação foi bem sucedida! O número ${soma} é par`)
+            })
+            .catch(error => console.log(`A operação falhou! ${error.message}`))
+
+2) Crie uma função dobrarEm5Segundos(numero, cb) que dobre o valor de um número após 5 segundos. Se o valor recebido não for um número
+ele irá chamar a cb passando um erro. 
+callback(error, result) => Se um erro for passado irá mostrar a mensagem: "A operação falhou! [mensagem do erro]".
+Senão, irá mostrar a mensagem: "A operação foi bem sucedida! O resultado é [result]".
+
+        let numero = +prompt("Digite um número")
+        function dobrarEm5Segundos(numero) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resultado = numero * 2
+                    if (isNaN(numero)) {
+                        reject(new Error("Operação falhou!"))
+                    }
+                    resolve(resultado)
+                }, 5000)
+            })
+        }
+ 
+        dobrarEm5Segundos(numero)
+            .then(resultado => console.log(`A operação foi bem sucedida! O resultado é ${resultado}`)
+            )
+            .catch(error => console.log(error.message))
+
+1) Transforme o seguinte trecho de código utilizando async/await:
+const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
+function umPorSegundo() {
+delay().then(() => {
+console.log('1s');
+delay().then(() => {
+    console.log('2s');
+    delay().then(() => {
+        console.log('3s');
+});
+});
+});
+}
+umPorSegundo();
+*/   
+     function criaPromise() {
+            return new Promise(resolve => setTimeout(resolve, 1000));
+        }
+ 
+        async function umPorSegundo() {
+            await criaPromise()
+            console.log("1s")
+            await criaPromise()
+            console.log("2s")
+            await criaPromise()
+            console.log("3s")
+        }
+        
+        umPorSegundo();
