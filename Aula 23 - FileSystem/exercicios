@@ -1,0 +1,160 @@
+1. Crie um script que irá salvar as informações de memória a cada 5 segundos em um arquivo chamado log.txt
+As informações devem ser salvas no seguinte formato:
+{"total_memory":"xx MB", "free_memory":"xx MB", "usage":"xx %"}
+Onde:
+* total_memory: Quantidade total de memória.
+* free_memory: Quantidade de memória livre.
+* usage: Porcentagem de uso da memória.
+
+    const os = require("os");
+    const fsPromises = require("fs/promises")
+    const path = require("path")
+    const { EOL } = require("os");
+
+    setInterval(async() => {
+        const freeMem = parseInt(os.freemem()/1024/1024)
+        const totalMem = parseInt(os.totalmem()/1024/1024)
+        const usage = parseInt((freeMem * 100) / totalMem)
+
+        const content = {
+            freeMem: `${freeMem}MB`,
+            totalMem: `${totalMem}MB`,
+            usage: `${usage}%`
+        }
+
+        const contentInJSON = JSON.stringify(content) + EOL;
+        try {
+            await fsPromises.appendFile(path.resolve(__dirname, "log.txt"), contentInJSON);
+            console.log("Log adicionado");
+        } catch(err) {
+            console.log(err.message);
+        }
+
+    }, 5000);
+
+1) Crie um script que leia o arquivo exercioNomes.txt e mostra todos os nomes que começam com a letra A
+presentes no arquivo.
+
+    const fs = require("fs");
+    const {EOL} = require("os");
+    const fsPromises = require("fs/promises");
+    const path = require("path");
+
+    (async () => {
+        try {
+            const nomes = await fsPromises.readFile(path.resolve(__dirname, "exercicioNomes.txt"));
+            const nomesVet = nomes.toString("utf-8").split(EOL);        
+            const nomesComA = nomesVet.filter(nome => nome[0].toUpperCase() === "A");
+            console.log(nomesComA);
+        } catch (err) {
+            console.log(err.message);
+        }
+    })();
+
+2) Crie uma função getUserByName(name) que retorne o usuário obtido através do arquivo "users.json". Caso o usuário
+não exista a função deve retornar undefined.
+
+Se o usuário existir mostrar as informações do usuário no seguinte formato:
+Usuário encontrado: 
+nome: [nome do usuário]
+idade: [idade do usuário]
+email: [email do usuário]
+
+Caso o usuário não existir mostrar a mensagem: "Usuário não foi encontrado."
+
+Obs.: Nome e sobrenome.
+
+        const fsPromises = require("fs/promises");
+    const path = require("path");
+
+    async function getUserByName(name) {
+        try {
+            const data = await fsPromises.readFile(path.resolve(__dirname, "users.json"));
+            const users = JSON.parse(data.toString("utf-8"));
+
+            const user = users.find(user => user.nome === name);
+
+            return user
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+
+    (async () => {
+        const user = await getUserByName("Pedro");
+
+        if (user) {
+            console.log(`Usuário encontrado:\nnome: ${user.nome}\nidade: ${user.idade}\nemail: ${user.email}`);
+        } else {
+            console.log("Usuário não foi encontrado!");
+        }
+    })();
+
+3) Faça um script que leia o arquivo exercioNomes.txt e utilize a biblioteca chalk (https://www.npmjs.com/package/chalk) para
+mostrar os nomes que começam com a letra A em vermelho, os nomes que começam com a letra C em azul e os
+nomes que começam com a letra D em magenta.
+    const chalk = require('chalk');
+    const fs = require("fs");
+    const {EOL} = require("os");
+    const fsPromises = require("fs/promises");
+    const path = require("path");
+
+    (async () => {
+        try {
+            const nomes = await fsPromises.readFile(path.resolve(__dirname, "exercicioNomes.txt"));
+            const nomesVet = nomes.toString("utf-8").split(EOL);        
+            const nomesComA = nomesVet.filter(nome => nome[0].toUpperCase() === "A");
+            console.log(chalk.red(nomesComA));
+            const nomesComC = nomesVet.filter(nome => nome[0].toUpperCase() === "C");
+            console.log(chalk.blue(nomesComC));
+            const nomesComD = nomesVet.filter(nome => nome[0].toUpperCase() === "D");
+            console.log(chalk.magenta(nomesComD));
+        } catch (err) {
+            console.log(err.message);
+        }
+    })();
+
+1) Crie uma função obterArquivos(path) que receba como parâmetro o path de um diretório
+e retorne um vetor com todos os arquivos presentes naquele diretório.
+Obs.: Diretórios não devem ser incluídos.
+
+    const fs = require("fs");
+    const fsPromises = require("fs/promises");
+    const path = require("path");
+
+    (async () => {
+        const nomePasta = path.resolve(__dirname, "../../", "Aula 15 - DOM");
+        const files = await fsPromises.readdir(nomePasta);
+        console.log(files);
+    })();
+
+2) Crie uma função moveFiles(oldFolderPath, newFolderPath) que move os arquivos da pasta original
+para a nova pasta.
+
+    const fs = require("fs");
+    const fsPromises = require("fs/promises");
+    const path = require("path");
+    
+    (async () => {
+        try {
+            await fsPromises.rename(path.resolve(__dirname, "animal.jpg"), "..", "EX5", "coala.jpg");
+            console.log("Arquivo renomeado");
+        } catch (err) {
+            console.log(err.message);
+        }    
+    })();
+    
+    
+    // const currentPath = path.join(__dirname, "coala.jpg");
+    // const destinationPath = path.join(__dirname, "..", "EX5", "animal.jpg");
+    
+    // fs.rename(currentPath, destinationPath, function (err) {
+    //     if (err) {
+    //         throw err
+    //     } else {
+    //         console.log("Successfully moved the file!");
+    //     }
+    // });
+    
+    
+    
