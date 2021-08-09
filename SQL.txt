@@ -1,0 +1,7 @@
+SELECT * FROM produtos WHERE nome ILIKE 'l____';
+
+SELECT COUNT(id) quandidade_pedidos FROM pedidos;
+
+SELECT min(total_pedido) FROM pedidos;
+
+SELECT ROUND (avg(total_pedido),2) FROM pedidos;
