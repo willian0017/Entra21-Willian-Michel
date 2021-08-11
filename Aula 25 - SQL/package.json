@@ -1,0 +1,23 @@
+{
+  "name": "entra21-willian-michel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willian0017/Entra21-Willian-Michel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willian0017/Entra21-Willian-Michel/issues"
+  },
+  "homepage": "https://github.com/willian0017/Entra21-Willian-Michel#readme",
+  "dependencies": {
+    "pg": "^8.7.1",
+    "pg-format": "^1.0.4"
+  }
+}
