@@ -1,0 +1,1 @@
+const { Usuario } = require("../db/models");

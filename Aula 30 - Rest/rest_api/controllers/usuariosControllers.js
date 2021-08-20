@@ -1,6 +1,6 @@
 const usuariosServices = require("../services/usuariosServices");
 
-async function getAll(req, res, next) {
+async function getAll(req, res, next) {    
     try {
         const usuarios = await usuariosServices.getUsuarios();
 
@@ -12,33 +12,36 @@ async function getAll(req, res, next) {
 }
 
 async function getOne(req, res, next) {
-    try {
+    try {        
         const usuarios = await usuariosServices.getUsuario(req.params.id);
 
         res.json(usuarios);
+    } catch (err) { 
+        console.log(err);       
+        next(err);
+    }
+}
+
+async function create(req, res, next) {
+    try {
+        const usuario = req.body;
+
+        const novoUsuario = await usuariosServices.createUsuario(usuario);
+
+        res.status(201).json(novoUsuario);
     } catch (err) {
         console.log(err);
         next(err);
     }
 }
 
-async function create(req, res, next) {
-    // Validar se o usuário já existe através do e-mail
-    try {
-        const usuario = await usuariosServices.createUsuario(req.body);
-
-        res.json(usuario);
-    } catch (err) {
-        console.log(err);
-        next(err);
-    }
-};
-
 async function update(req, res, next) {
     try {
-        const usuario = await usuariosServices.updateUsuarios(req.params.id, req.body);
+        const usuario = req.body;
 
-        res.json(usuario);
+        const usuarioAtualizado = await usuariosServices.updateUsuario(req.params.id, usuario);
+
+        res.json(usuarioAtualizado);
     } catch (err) {
         console.log(err);
         next(err);
@@ -62,4 +65,4 @@ module.exports = {
     create,
     update,
     remove
-}
+};
