@@ -21,6 +21,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      role:{
+        type: Sequelize.ENUM("amin", "user"),
+        allowNull:false
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE

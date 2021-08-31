@@ -8,24 +8,31 @@ const { User, RefreshToken } = require("./models");
 
 app.use(express.json());
 
-function authMiddleware(req, res, next) {
-    const authToken = req.headers.authorization?.replace("Bearer ", "");
+function authMiddleware(permissions) {
+    return (req, res, next) {
+        const authToken = req.headers.authorization?.replace("Bearer ", "");
 
-    if (!authToken) {
-        res.status(401).json({ message: "Token is missing" });
+        if (!authToken) {
+            res.status(401).json({ message: "Token is missing" });
+        }
+    
+        try {
+            const payload = jwt.verify(authToken, process.env.TOKEN_SECRET);
+            
+            if(permissions.includes(payload.role)){
+                res.status(403).json({message:"you dont have permission"})
+            }
+
+            res.locals.userId = payload.sub;
+    
+            next();
+
+        } catch (error) {
+            console.log(error);
+            res.status(401).json({ message: "Invalid Token!" });
+        }
     }
-
-    try {
-        const payload = jwt.verify(authToken, process.env.TOKEN_SECRET);
-
-        res.locals.userId = payload.sub;
-
-        next();
-    } catch (error) {
-        console.log(error);
-        res.status(401).json({ message: "Invalid Token!" });
-    }
-};
+}
 
 app.get("/", (req, res) => {
     res.send("Olá mundo!");
@@ -46,7 +53,7 @@ app.post("/login", async (req, res) => {
         }
 
         // Emitindo o access-token
-        const token = jwt.sign({ sub: user.id }, process.env.TOKEN_SECRET, {
+        const token = jwt.sign({ sub: user.id, role: user.role }, process.env.TOKEN_SECRET, {
             expiresIn: "20s"
         });
 
@@ -114,7 +121,7 @@ app.post("/refresh", async (req, res) => {
     }
 });
 
-app.get("/users", authMiddleware, async (req, res) => {
+app.get("/users", authMiddleware(["admin"]), async (req, res) => {
     try {
         console.log(res.locals.userId);
 
@@ -137,7 +144,8 @@ app.post("/users", async (req, res) => {
             },
             defaults: {
                 name,
-                password
+                password,
+                role: "users"
             }
         })
 

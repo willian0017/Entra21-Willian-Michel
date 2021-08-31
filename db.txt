@@ -1,0 +1,34 @@
+(node) npm i:
+
+pg 
+pg-hstore
+dotenv
+sequelize
+sequelize-cli
+multer
+bcrypt
+express
+http-errors
+cors
+
+npm i -D nodemon
+npx sequelize init
+npx sequelize db:create
+
+migrations:
+npx sequelize model:generate --name O_NOME --attributes name:string,name:string
+npx sequelize model:generate --name RefreshToken
+
+------------------------
+dentro da pasta:
+
+client (front)
+server (back)
+> src (index.js)
+  controllers 
+  routes
+.sequelizerc
+.env
+
+------------------------
+.env é a database config
