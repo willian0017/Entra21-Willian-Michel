@@ -1,11 +1,10 @@
 import React from "react"
 
-class Square extends React.Component {
-    render() {
-      return (
-        <button className="square"onClick={function() { console.log('click'); }}>
-          {this.props.value}
-        </button>
-      );
-    }
+export function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
 }
+
