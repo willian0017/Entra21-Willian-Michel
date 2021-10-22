@@ -1,0 +1,41 @@
+Scrum
+framework
+
+visao do produto
+transparencia dos processos
+inspeção constante
+adaptadação, sofre mudanças
+
+praticas fundamentais:
+papeis, scrum master product owner
+quais produtos serao definidos, ajudar todos os individuos a entender
+pessoas q vao construir o projeto
+
+eventos:
+
+artefatos:
+
+product backlog:
+imprescindivel
+importante
+seria bom ter
+
+>burndown chart
+
+>kanban board
+
+
+1> product backlog (oq vamos fazer)
+2> filtragem (imprescindivel, importante, seria bom ter)
+3> sprint (trello: criar area de trabalho do nosso projeto)
+
+
+
+
+npm i swagger-ui-express
+routes - index.js:
+const swaggerUi - require("swagger-ui-express")
+const swaggerDocument = require("../swagger.json")
+definir uma rota
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument)
+swagger.json (na raiz)
